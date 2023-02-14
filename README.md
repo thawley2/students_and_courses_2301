@@ -95,7 +95,7 @@ Method Name                 | Return Value (type)
 -----------                 | -------------------
 `instructor`                | `String`
 `courses`                   | `Array` of `Course` objects
-`add_course(course)`        | `courses` (`Array` of `course` objects)
+`add_course(course)`        | `courses` (`Array` of `Course` objects)
 `list_all_students`         | `Array` of `Student` objects
 `students_below(threshold)` | `Array` of `Student` objects
 
