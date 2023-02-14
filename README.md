@@ -87,9 +87,18 @@ pry(main)> course.full?
 You have been contracted by the University of Denver to write a program that models gradebooks for its courses. Use TDD to implement the following features:
 
 1. Create a `Gradebook` class. Each gradebook has an `instructor`, as well as a way to read that data.
-2. Each gradebook has `courses`, as well as a way to read that data. Courses can be added with `add_course`.
-3. A gradebook can `list_all_students` in its courses.
-4. A gradebook can `list_all_students_with_low_grades` to return a list of students whose grades are below a given threshold.
+2. Each gradebook has `courses`, as well as a way to read that data.
+3. A gradebook can `list_all_students` in any of its courses.
+4. A gradebook can `students_below` to return a list of students whose grades are below a given threshold.
+
+Method Name                 | Return Value (type)
+-----------                 | -------------------
+`instructor`                | `String`
+`courses`                   | `Array` of `Course` objects
+`add_course(course)`        | `courses` (`Array` of `course` objects)
+`list_all_students`         | `Array` of `Student` objects
+`students_below(threshold)` | `Array` of `Student` objects
+
 
 ## Iteration 4
 
