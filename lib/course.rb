@@ -5,7 +5,6 @@ class Course
     @name = name
     @capacity = capacity
     @students = []
-    @full = false
   end
 
   def full?
@@ -18,5 +17,5 @@ class Course
     else @students << student
     end
   end
-  
+
 end
