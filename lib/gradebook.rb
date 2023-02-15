@@ -22,4 +22,14 @@ class GradeBook
     all_students = @courses.map { |course| course.students }.flatten
     all_students.select { |student| student.grade < threshold}
   end
+
+  def all_student_grades
+    student_grades = {}
+    @courses.each do |course|
+      course.students.each do |student|
+        student_grades[student.name] = student.grade
+      end
+    end
+    student_grades
+  end
 end
