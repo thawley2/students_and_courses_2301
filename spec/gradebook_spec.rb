@@ -48,7 +48,7 @@ RSpec.describe GradeBook do
       @gb.add_course(@course1)
       @gb.add_course(@course2)
 
-      expect(@gb.list_all_students).to eq([@student1, @student2, @student3, @student4])
+      expect(@gb.list_all_students).to eq({'Biology' => [@student3, @student4], 'Calculus' => [@student1, @student2]})
     end
   end
 end
