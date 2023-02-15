@@ -20,6 +20,14 @@ RSpec.describe GradeBook do
     @course2.enroll(@student3)
     @course2.enroll(@student4)
 
+    @student1.log_score(55)
+    @student1.log_score(60)
+    @student2.log_score(80)
+    @student2.log_score(70)
+    @student3.log_score(95)
+    @student3.log_score(88)
+    @student4.log_score(49)
+    @student4.log_score(65)
   end
 
   describe '#initialize' do
@@ -50,5 +58,12 @@ RSpec.describe GradeBook do
 
       expect(@gb.list_all_students).to eq({'Biology' => [@student3, @student4], 'Calculus' => [@student1, @student2]})
     end
+  end
+
+  it 'can list all students below a certain grade' do
+    @gb.add_course(@course1)
+    @gb.add_course(@course2)
+
+    expect(@gb.students_below(60)).to eq([@student1, @student4])
   end
 end
