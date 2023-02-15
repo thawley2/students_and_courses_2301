@@ -17,4 +17,9 @@ class GradeBook
     end
     students_by_course
   end
+
+  def students_below(threshold)
+    all_students = @courses.map { |course| course.students }.flatten
+    all_students.select { |student| student.grade < threshold}
+  end
 end
