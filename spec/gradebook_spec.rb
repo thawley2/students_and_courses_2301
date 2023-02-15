@@ -66,4 +66,11 @@ RSpec.describe GradeBook do
 
     expect(@gb.students_below(60)).to eq([@student1, @student4])
   end
+
+  it 'can list all grades by all students' do
+    @gb.add_course(@course1)
+    @gb.add_course(@course2)
+
+    expect(@gb.all_student_grades).to eq({"Billy"=>91.5, "Jordan"=>75.0, "Morgan"=>57.5, "Sam"=>57.0})
+  end
 end
